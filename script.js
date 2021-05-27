@@ -29,14 +29,30 @@
 
 						// Method 3
 
+// For initial loading 
+$.get(`https://dog.ceo/api/breeds/image/random`,function(data){
+		var imgurl = data.message;
+		$('#image').attr("src",imgurl);
+	})
+
+
+
+// Getting all breed list 
+$.get("https://dog.ceo/api/breeds/list/all", function(data){
+	var list = data.message
+	for (let v in list){
+		$("#drp-down").append(`<option>${v}</option>`)
+	}
+})
+
+
 function fetchImage(){
-	$.get("https://dog.ceo/api/breeds/image/random",function(data){
+	var Val = $("#drp-down").val();
+	console.log(Val)
+	$.get(`https://dog.ceo/api/breed/${Val}/images/random`,function(data){
 		var imgurl = data.message;
 		$('#image').attr("src",imgurl);
 	})
 }
-
-
-
 
 $('#button').click(fetchImage);
