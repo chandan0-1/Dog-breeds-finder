@@ -7,29 +7,30 @@
 </head>
 
 <body>
+	<div id="cntnr">
+		<header> 
+			<img src="https://image.flaticon.com/icons/png/512/4600/4600227.png">
+			<h1>&nbspDog Finder</h1>
+		</header>
 
-	<header> 
-		<h1>Dog Finder</h1>
-	</header>
-
-	<!-- Dropdown menu for breed selection -->
-	<div id="Select">
-		<div>
-			<label for="drp-down">Catogery:</label>
-			<select value="Breed" placeholder="Select breed" id="drp-down" >
-	        <!-- <option>Hello</option> -->
-	    </select>
+		<!-- Dropdown menu for breed selection -->
+		<div id="Select">
+			<div>
+				<label for="drp-down">Catogery:</label>
+				<select value="Breed" placeholder="Select breed" id="drp-down" >
+		        <!-- <option>Hello</option> -->
+		    </select>
+			</div>
+		        
+			<button id="button">Get Next Image</button>
 		</div>
-	        
-		<button id="button">Get Next Image</button>
+
+
+		<div id="img-container">
+			<img id="image">
+		</div>
+
 	</div>
-
-
-	<div id="img-container">
-		<img id="image">
-	</div>
-
-	
 
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
